@@ -1,0 +1,36 @@
+{
+  "name": "fullstack_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/pages/*.html --open --no-source-maps",
+    "build": "parcel build ./src/pages/*.html --no-source-maps",
+    "watch": "parcel watch ./src/pages/*.html --no-source-maps",
+    "dev": "parcel ./src/pages/*.html --no-source-maps"
+  },
+  "optimizers": {
+    "*.js": [
+      "@parcel/optimizer-terser"
+    ]
+  },
+  "keywords": [],
+  "author": "Gudkov Sergey",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@parcel/babel-preset": "^2.0.0-alpha.2",
+    "babel": "^6.23.0",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "sass": "^1.29.0",
+    "terser": "^5.3.8"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.12.5",
+    "axios": "^0.21.0",
+    "fo": "^0.1.1",
+    "undefined": "^0.1.0"
+  }
+}
