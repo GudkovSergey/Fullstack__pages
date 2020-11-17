@@ -1,4 +1,5 @@
 @import './fonts.sass'
+@import './variable.sass'
 
 body
     width: 1440px
@@ -7,8 +8,7 @@ body
     padding: 0
 
 .colors-type
-    display: flex
-    flex-direction: row
+    @include flex-row
     justify-content: space-between
     
 .logo
@@ -22,8 +22,7 @@ body
     margin-left: 15px
 
 .box-colors 
-    display: flex
-    flex-direction: row
+    @include flex-row
     justify-content: space-between 
     margin-top: 80px
     margin-left: 147px
@@ -32,15 +31,13 @@ body
      
 
 .box-colors__color
-    display: flex 
-    flex-direction: column
+    @include flex-column
     justify-content: space-between 
     height: 610px
     width: 70px
 
 .box-colors__title
-    display: flex
-    flex-direction: column
+    @include flex-column
     justify-content: space-between 
     height: 610px
     width: 200px
@@ -52,44 +49,40 @@ body
     border-radius: 6px    
     
 .dark_100
-    background-color: #1F2041
+    background-color: $Dark_Shade_100
 .dark_75
-   background-color: rgba(31, 32, 65, 0.75)
+   background-color: $Dark_Shade_75
 .dark_50 
-   background-color: rgba(31, 32, 65, 0.5)
+   background-color: $Dark_Shade_50
 .dark_25
-    background-color: rgba(31, 32, 65, 0.25) 
+    background-color: $Dark_Shade_25
 .dark_5 
-    background-color: rgba(31, 32, 65, 0.05) 
+    background-color: $Dark_Shade_5
 .purple
-    background-color: #BC9CFF
+    background-color: $purple
 .green
-    background-color: #6FCF97
+    background-color: $green
 
 .box-colors__name 
     height: 57px
     width: 159px
     margin-left: 20px
-    font-family: Quicksand
-    font-style: normal
-    font-weight: bold
+    @include Quicksand-bold
     font-size: 19px
     line-height: 29px 
 
 .colors-type__box-widget
-    display: flex
-    flex-direction: row
+    @include flex-row
     justify-content: space-between
     margin-top: 80px
     margin-right: 191px 
 
 
 .widget
-    font-family: Montserrat
-    font-style: normal
-    font-weight: normal
+    @include Montserrat-norm
     color: rgba(31, 32, 65, 0.25)
     margin-right: 30px
+
 .widget__name-h1
     font-size: 24px
     line-height: 29px
@@ -112,31 +105,25 @@ body
     line-height: 24px
 
 .box-wiget__title 
-    font-family: Quicksand
-    font-style: normal
-    font-weight: bold
+    @include Quicksand-bold
 .title-h1_property 
     font-size: 24px
     line-height: 30px
-    color: #1F2041
+    color: $Dark_Shade_100
 .title-h2_property 
     margin-top: 50px
     font-size: 19px
     line-height: 24px
-    color: #1F2041
+    color: $Dark_Shade_100
 .title-h3_property
-    font-family: Montserrat
-    font-style: normal
-    font-weight: bold
+    @include Montserrat-bold
     text-transform: uppercase 
     margin-top: 50px
     font-size: 12px
     line-height: 15px
-    color: #1F2041
+    color: $Dark_Shade_100
 .title-body_property
-    font-family: Montserrat
-    font-style: normal
-    font-weight: normal 
+    @include Montserrat-norm 
     margin-top: 50px
     font-size: 14px
     line-height: 24px
