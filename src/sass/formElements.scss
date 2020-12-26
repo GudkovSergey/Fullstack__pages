@@ -150,9 +150,14 @@ input:invalid {
   border:none;
   margin-left: 10px; 
 }
-.fa.fa-chevron-down{
-    color: $Dark_Shade_75;
-    font-size: 18px;
+.icon-sufix{
+  color: $Dark_Shade_75;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
 
 }
 

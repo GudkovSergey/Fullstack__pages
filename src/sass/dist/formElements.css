@@ -180,7 +180,12 @@ input:invalid {
   margin-left: 10px;
 }
 
-.fa.fa-chevron-down {
+.icon-sufix {
   color: rgba(31, 32, 65, 0.75);
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
 }
