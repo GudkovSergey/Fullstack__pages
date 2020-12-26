@@ -13,15 +13,29 @@ $green: #6FCF97;
 @mixin logo {
   width: 48px;
   height: 48px;
-  display: flex;
-  justify-content: start;
+  display: block;
+  position: relative;
   margin-top: 30px;
   margin-left: 30px;
 
 }
 
+//input
+@mixin input {
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  border: 1px solid $Dark_Shade_25;
+  border-radius: 4px;
+  padding: 5px 5px 5px 15px;
+  font-size: 14px;
+  @include Montserrat-norm;
+
+}
+
+
 //Fonts
-    
+
 @mixin Montserrat-norm {
   font-family: Montserrat;
   font-style: normal;
@@ -44,20 +58,16 @@ $green: #6FCF97;
   font-family: Quicksand;
   font-style: normal;
   font-weight: normal;
-}      
+}
 
 // flex
 
 @mixin flex-row {
-  display: flex; 
+  display: flex;
   flex-direction: row;
 }
 
 @mixin flex-column {
-   display: flex; 
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
-      
-
-        

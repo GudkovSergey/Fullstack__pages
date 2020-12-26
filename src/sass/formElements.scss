@@ -1,0 +1,173 @@
+@import './fonts.scss';
+@import './variable.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    // @include flex-column;
+    max-width: 1440px;
+    min-width: 320px;
+    //border: 1px solid red;
+}
+
+.logo img {
+    @include logo;
+}
+
+.field-elements {
+    //border: 1px solid green;
+    width: 100%;
+}
+
+.field-elements__field {
+    display: inline-block;
+    position: relative;
+    margin-left: 141px;
+    margin-top: 65px;
+    width: 22.5%;
+    //border: 1px solid red;
+}
+
+.field-elements__email {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+input:invalid {
+    box-shadow: none;
+}
+
+#mail {
+    @include input;
+
+
+}
+
+#mail::placeholder {
+    color: $Dark_Shade_25;
+
+}
+
+.field-title {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
+
+}
+
+.field-name {
+    max-width: 320px;
+    @include Montserrat-bold;
+    text-transform: uppercase;
+    color: $Dark_Shade_100;
+
+}
+
+.field-status {
+    max-width: 320px;
+    @include Montserrat-norm;
+    color: $Dark_Shade_5;
+
+}
+
+.field-elements__hover {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#hover {
+    @include input;
+    border: 1 px solid $Dark_Shade_50;
+
+}
+
+#hover::placeholder {
+
+    color: $Dark_Shade_75;
+    color: transparent;
+}
+
+#hover:focus::placeholder {
+    //color:transparent;
+    color: $Dark_Shade_25;
+}
+
+#hover:hover::placeholder {
+    //color:transparent;
+    color: $Dark_Shade_75;
+}
+
+.field-elements__guest {
+    display: flex;
+    position: relative;
+    // width: 100%;
+    @include input;
+    margin-top: 40px;
+    padding-left: 0;
+   
+}
+
+#guest {
+    // @include input;
+    
+    font-size: 14px;
+    width: 90%;
+    max-width: 320px;
+    height: 35px;
+    // border: 1px solid $Dark_Shade_25;
+    // border-radius: 4px;
+    padding: 3px 5px 5px 15px;
+    font-size: 14px;
+    @include Montserrat-norm;
+    margin-left: 0;
+    border: none;
+    outline:none;
+}
+
+#guest::placeholder {
+
+    color: $Dark_Shade_75;
+}
+
+.guest-buttton,.guest-buttton:active,.guest-buttton:focus {
+  width: 10%; 
+  outline: none;
+  text-transform: uppercase;
+  background-color:white;
+  cursor: pointer;
+  border:none;
+  margin-left: 10px; 
+}
+.fa.fa-chevron-down{
+    color: $Dark_Shade_75;
+    font-size: 18px;
+
+}
+
+.field-elements__masked {}
+
+.field-elements__date {}
+
+.date {}
+
+.date-number {}
+
+.field-elements__date-filter {}
+
+.field-elements__subscription {}
+
+.field-elements__checkbox {}
+
+.field-elements__buttons {}
