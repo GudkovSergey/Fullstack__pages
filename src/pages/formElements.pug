@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 html(lang="en")
-  head
+head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title Formelements
     link(rel="stylesheet", href="../fonts_icon/toxin_icon.css")
-    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js")
     script(src="../js/formElements.js")
-
-  body
-    .container
+    script(src="../js/jquery.maskedinput.min.js")
+    script(src="../js/masked.js")  
+body
+     .container
       .logo
         img(src="../image/logo.png" class="logo" alt="logo")
       .field-elements
-        .field-elements__field 
-          .field-elements__email
-            .field-title
+        .field-elements__field
+          .field-title
               .field-name Text Field
               .field-status Default
+
+          form(action="#").field-elements__email
             input(id="mail" type="email" placeholder="Email")
-          .field-elements__hover
-            .field-title
+
+          .field-title
               .field-name Text Field
-              .field-status Hover / Focus      
+              .field-status Hover / Focus 
+
+          form(action="#").field-elements__hover
             input(id="hover" type="text" placeholder="This is pretty awesome")
-          //- .field-title
-          //-     .field-name Dropdown  
+
+          .field-title
+              .field-name Dropdown 
+
           form(action="#").field-elements__guest
-            //- .field-title
-            //-   .field-name Dropdown
-                
             input(id="guest" type="text" placeholder="Сколько гостей")
             button(class="guest-buttton icon-sufix " type="submit" )
-          .field-elements__masked
-          .field-elements__date
-            .date
-            .date-number
+
+          .field-title
+              .field-name masked text field
+               
+
+          form(action="#").field-elements__masked
+            input(id="date" class="masked" type="text")
+            
+          
           .ield-elements__date-filter
           .field-elements__subscription
           .field-elements__checkbox
           .field-elements__buttons
+     
+     
 
 
 

@@ -38,6 +38,8 @@
     display: block;
     position: relative;
     width: 100%;
+    margin-top: 5px;
+    
 }
 
 input:invalid {
@@ -46,8 +48,7 @@ input:invalid {
 
 #mail {
     @include input;
-
-
+    
 }
 
 #mail::placeholder {
@@ -62,6 +63,7 @@ input:invalid {
     justify-content: space-between;
     font-size: 12px;
     line-height: 15px;
+    margin-top: 20px;
 
 }
 
@@ -76,21 +78,22 @@ input:invalid {
 .field-status {
     max-width: 320px;
     @include Montserrat-norm;
-    color: $Dark_Shade_5;
-
+    color: $Dark_Shade_50;
+    
 }
 
 .field-elements__hover {
     display: block;
     position: relative;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 5px;
+    
 }
 
 #hover {
     @include input;
     border: 1 px solid $Dark_Shade_50;
-
+    
 }
 
 #hover::placeholder {
@@ -111,29 +114,25 @@ input:invalid {
 
 .field-elements__guest {
     display: flex;
-    position: relative;
-    // width: 100%;
-    @include input;
-    margin-top: 40px;
+    margin-top: 5px;
     padding-left: 0;
+    height: 44px;
+    border: 1px solid $Dark_Shade_25;
+    border-radius: 4px;
+    padding: 5px 5px 5px 0px;
+    
    
 }
 
 #guest {
-    // @include input;
-    
-    font-size: 14px;
+    @include input;
     width: 90%;
     max-width: 320px;
     height: 35px;
-    // border: 1px solid $Dark_Shade_25;
-    // border-radius: 4px;
     padding: 3px 5px 5px 15px;
-    font-size: 14px;
-    @include Montserrat-norm;
-    margin-left: 0;
     border: none;
-    outline:none;
+    
+    
 }
 
 #guest::placeholder {
@@ -161,7 +160,19 @@ input:invalid {
 
 }
 
-.field-elements__masked {}
+.field-elements__masked {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+.masked{
+    @include input; 
+}
+.masked::placeholder {
+    color: $Dark_Shade_25;
+
+}
 
 .field-elements__date {}
 

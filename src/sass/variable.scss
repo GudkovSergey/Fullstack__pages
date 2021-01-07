@@ -29,8 +29,44 @@ $green: #6FCF97;
   border-radius: 4px;
   padding: 5px 5px 5px 15px;
   font-size: 14px;
+  outline: none;
   @include Montserrat-norm;
 
+}
+@mixin dropdown {
+  display: flex;
+  margin-top: 5px;
+  padding-left: 0;
+  height: 44px;
+  border: 1px solid $Dark_Shade_25;
+  border-radius: 4px;
+  padding: 5px 5px 5px 15px;
+}
+@mixin dropdown-input{
+  @include input;
+  width: 90%;
+  max-width: 320px;
+  height: 35px;
+  padding: 3px 5px 5px 0px;
+  border: none;
+}
+@mixin dropdown-button{
+  width: 10%; 
+  outline: none;
+  text-transform: uppercase;
+  background-color:white;
+  cursor: pointer;
+  border:none;
+  margin-left: 10px; 
+}
+@mixin dropdown-icon{
+  color: $Dark_Shade_75;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
 }
 
 

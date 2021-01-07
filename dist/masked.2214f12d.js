@@ -117,85 +117,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../sass/colorsType.scss":[function(require,module,exports) {
+})({"../js/masked.js":[function(require,module,exports) {
 "use strict";
 
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Quicksand-Regular.eot":[["Quicksand-Regular.72803d54.eot","../fonts/Quicksand-Regular.eot"],"../fonts/Quicksand-Regular.eot"],"./..\\fonts\\Quicksand-Regular.woff":[["Quicksand-Regular.03921d16.woff","../fonts/Quicksand-Regular.woff"],"../fonts/Quicksand-Regular.woff"],"./..\\fonts\\Quicksand-Regular.ttf":[["Quicksand-Regular.ebf4da6a.ttf","../fonts/Quicksand-Regular.ttf"],"../fonts/Quicksand-Regular.ttf"],"./..\\fonts\\Quicksand-Regular.svg":[["Quicksand-Regular.40761e06.svg","../fonts/Quicksand-Regular.svg"],"../fonts/Quicksand-Regular.svg"],"./..\\fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.01408999.eot","../fonts/Montserrat-Regular.eot"],"../fonts/Montserrat-Regular.eot"],"./..\\fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.dad99bf3.woff","../fonts/Montserrat-Regular.woff"],"../fonts/Montserrat-Regular.woff"],"./..\\fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44240835.ttf","../fonts/Montserrat-Regular.ttf"],"../fonts/Montserrat-Regular.ttf"],"./..\\fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.b9b207ba.svg","../fonts/Montserrat-Regular.svg"],"../fonts/Montserrat-Regular.svg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../js/colorsType.js":[function(require,module,exports) {
-"use strict";
-
-require("../sass/colorsType");
-},{"../sass/colorsType":"../sass/colorsType.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+$(function () {
+  //задание заполнителя с помощью параметра placeholder
+  $("#date").mask("99.99.9999", {
+    placeholder: "ДД.ММ.ГГГГ"
+  });
+});
+},{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -399,4 +330,4 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/colorsType.js"], null)
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/masked.js"], null)

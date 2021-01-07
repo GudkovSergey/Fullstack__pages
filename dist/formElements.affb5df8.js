@@ -194,8 +194,8 @@ module.hot.accept(reloadCSS);
 },{"./..\\fonts\\Quicksand-Regular.eot":[["Quicksand-Regular.72803d54.eot","../fonts/Quicksand-Regular.eot"],"../fonts/Quicksand-Regular.eot"],"./..\\fonts\\Quicksand-Regular.woff":[["Quicksand-Regular.03921d16.woff","../fonts/Quicksand-Regular.woff"],"../fonts/Quicksand-Regular.woff"],"./..\\fonts\\Quicksand-Regular.ttf":[["Quicksand-Regular.ebf4da6a.ttf","../fonts/Quicksand-Regular.ttf"],"../fonts/Quicksand-Regular.ttf"],"./..\\fonts\\Quicksand-Regular.svg":[["Quicksand-Regular.40761e06.svg","../fonts/Quicksand-Regular.svg"],"../fonts/Quicksand-Regular.svg"],"./..\\fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.01408999.eot","../fonts/Montserrat-Regular.eot"],"../fonts/Montserrat-Regular.eot"],"./..\\fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.dad99bf3.woff","../fonts/Montserrat-Regular.woff"],"../fonts/Montserrat-Regular.woff"],"./..\\fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44240835.ttf","../fonts/Montserrat-Regular.ttf"],"../fonts/Montserrat-Regular.ttf"],"./..\\fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.b9b207ba.svg","../fonts/Montserrat-Regular.svg"],"../fonts/Montserrat-Regular.svg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../js/formElements.js":[function(require,module,exports) {
 "use strict";
 
-require("../sass/formElements");
-},{"../sass/formElements":"../sass/formElements.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("../sass/formElements.scss");
+},{"../sass/formElements.scss":"../sass/formElements.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -223,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52670" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54244" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
