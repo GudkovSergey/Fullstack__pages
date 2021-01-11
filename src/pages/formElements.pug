@@ -35,15 +35,29 @@ body
 
           form(action="#").field-elements__guest
             input(id="guest" type="text" placeholder="Сколько гостей")
-            button(class="guest-buttton icon-sufix " type="submit" )
+            button(class="sufix-buttton icon-sufix " type="submit" )
 
           .field-title
               .field-name masked text field
                
 
           form(action="#").field-elements__masked
-            input(id="date" class="masked" type="text")
-            
+            input( id="masked" class="date" class="masked" type="text")
+          
+          
+          .field-elements__date
+            .container_date
+              .field-title
+                .field-name date Dropdown
+              form(action="#").field-elements__date_ordinary
+                input(id="masked_date" class="date" )
+                button(class="sufix-buttton icon-sufix " type="submit" )
+            .container_date-today
+              .field-title
+                .field-name date Dropdown
+              form(action="#").field-elements__date_today  
+                input(id="masked_today" class="date" ) 
+                button(class="sufix-buttton icon-sufix " type="submit" )
           
           .ield-elements__date-filter
           .field-elements__subscription

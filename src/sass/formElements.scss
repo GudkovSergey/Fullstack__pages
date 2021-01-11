@@ -140,14 +140,9 @@ input:invalid {
     color: $Dark_Shade_75;
 }
 
-.guest-buttton,.guest-buttton:active,.guest-buttton:focus {
-  width: 10%; 
-  outline: none;
-  text-transform: uppercase;
-  background-color:white;
-  cursor: pointer;
-  border:none;
-  margin-left: 10px; 
+.sufix-buttton,.sufix-buttton:active,.sufix-buttton:focus {
+  @include dropdown-button;
+   
 }
 .icon-sufix{
   color: $Dark_Shade_75;
@@ -157,6 +152,7 @@ input:invalid {
   line-height: 24px;
   align-items: center;
   text-align: center;
+  margin-right: 3px;
 
 }
 
@@ -174,11 +170,42 @@ input:invalid {
 
 }
 
-.field-elements__date {}
+.field-elements__date {
+    display: flex;
+    margin-top: 40px ;
+   
+}
+.container_date{
+   width: 46%;
+}
+.container_date-today{
+    width: 46%;
+    margin-left: 20px;
+ }
 
-.date {}
 
-.date-number {}
+
+.field-elements__date_ordinary {
+    @include dropdown;
+    width: 46%;
+    min-width: 150px;
+}
+
+.field-elements__date_today {
+    @include dropdown;
+    width: 46%;
+    //margin-left: 20px ;
+    min-width: 150px;
+}
+#masked_date{
+    @include dropdown-input;
+    
+}
+#masked_today{
+    @include dropdown-input;
+    
+}
+
 
 .field-elements__date-filter {}
 
